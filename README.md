@@ -13,38 +13,6 @@ El objetivo es demostrar la construcción de una aplicación frontend moderna, c
 - ESLint / Prettier
 - Intl API (formato de moneda)
 
-## Estructura del proyecto
-
-simulador-ahorro/
-├─ app/
-│ ├─ onboarding/
-│ │ └─ page.tsx
-│ ├─ products/
-│ │ └─ page.tsx
-│ ├─ simulator/
-│ │ └─ page.tsx
-│ ├─ layout.tsx
-│ └─ page.tsx
-│
-├─ components/
-│ ├─ input/
-│ ├─ product-card/
-│ └─ header/
-│
-├─ lib/
-│ ├─ simulator.ts
-│ └─ validators.ts
-│
-├─ types/
-│ └─ product.ts
-│
-├─ public/
-├─ next.config.js
-├─ package.json
-└─ README.md
-
-La aplicación está organizada por dominios funcionales, lo que facilita su mantenimiento y futura escalabilidad.
-
 ## Navegación principal
 
 - `/products` → Catálogo de productos financieros
