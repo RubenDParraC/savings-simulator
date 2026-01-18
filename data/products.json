@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1",
+    "name": "Cuenta Ahorro Digital Plus",
+    "type": "Digital",
+    "interestRate": 5.2
+  },
+  {
+    "id": "2",
+    "name": "Cuenta Ahorro Tradicional",
+    "type": "Tradicional",
+    "interestRate": 3.8
+  },
+  {
+    "id": "3",
+    "name": "Cuenta Ahorro Joven",
+    "type": "Digital",
+    "interestRate": 4.5
+  },
+  {
+    "id": "4",
+    "name": "Cuenta Ahorro Nómina",
+    "type": "Tradicional",
+    "interestRate": 3.2
+  },
+  {
+    "id": "5",
+    "name": "Cuenta Ahorro Flexible",
+    "type": "Digital",
+    "interestRate": 4.9
+  },
+  {
+    "id": "6",
+    "name": "Cuenta Ahorro Clásica",
+    "type": "Tradicional",
+    "interestRate": 3.5
+  },
+  {
+    "id": "7",
+    "name": "Cuenta Ahorro Premium",
+    "type": "Digital",
+    "interestRate": 5.8
+  },
+  {
+    "id": "8",
+    "name": "Cuenta Ahorro Familiar",
+    "type": "Tradicional",
+    "interestRate": 3.6
+  },
+  {
+    "id": "9",
+    "name": "Cuenta Ahorro Online",
+    "type": "Digital",
+    "interestRate": 5.0
+  },
+  {
+    "id": "10",
+    "name": "Cuenta Ahorro Básica",
+    "type": "Tradicional",
+    "interestRate": 3.0
+  },
+
+  {
+    "id": "11",
+    "name": "Cuenta Ahorro Digital Avanzada",
+    "type": "Digital",
+    "interestRate": 5.4
+  },
+  {
+    "id": "12",
+    "name": "Cuenta Ahorro Programado",
+    "type": "Tradicional",
+    "interestRate": 3.9
+  },
+  {
+    "id": "13",
+    "name": "Cuenta Ahorro Smart",
+    "type": "Digital",
+    "interestRate": 5.1
+  },
+  {
+    "id": "14",
+    "name": "Cuenta Ahorro Estándar",
+    "type": "Tradicional",
+    "interestRate": 3.4
+  },
+  {
+    "id": "15",
+    "name": "Cuenta Ahorro Digital Joven",
+    "type": "Digital",
+    "interestRate": 4.7
+  },
+  {
+    "id": "16",
+    "name": "Cuenta Ahorro Senior",
+    "type": "Tradicional",
+    "interestRate": 3.7
+  },
+  {
+    "id": "17",
+    "name": "Cuenta Ahorro Plus Online",
+    "type": "Digital",
+    "interestRate": 5.6
+  },
+  {
+    "id": "18",
+    "name": "Cuenta Ahorro Clásica Plus",
+    "type": "Tradicional",
+    "interestRate": 3.3
+  },
+  {
+    "id": "19",
+    "name": "Cuenta Ahorro Digital Libre",
+    "type": "Digital",
+    "interestRate": 5.0
+  },
+  {
+    "id": "20",
+    "name": "Cuenta Ahorro AhorraMás",
+    "type": "Tradicional",
+    "interestRate": 4.0
+  },
+
+  {
+    "id": "21",
+    "name": "Cuenta Ahorro Digital Pro",
+    "type": "Digital",
+    "interestRate": 6.0
+  },
+  {
+    "id": "22",
+    "name": "Cuenta Ahorro Programado Plus",
+    "type": "Tradicional",
+    "interestRate": 4.1
+  },
+  {
+    "id": "23",
+    "name": "Cuenta Ahorro Digital Express",
+    "type": "Digital",
+    "interestRate": 5.3
+  },
+  {
+    "id": "24",
+    "name": "Cuenta Ahorro Tradicional Plus",
+    "type": "Tradicional",
+    "interestRate": 3.9
+  },
+  {
+    "id": "25",
+    "name": "Cuenta Ahorro Digital Total",
+    "type": "Digital",
+    "interestRate": 5.7
+  }
+]
