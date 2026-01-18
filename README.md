@@ -58,14 +58,16 @@ El objetivo es demostrar la construcción de una aplicación frontend moderna, c
 - Nombre
 - Documento
 - Correo electrónico
-- Campo oculto de reCAPTCHA simulado 1. **Validaciones**
-  _ Validación de campos mediante **Formik + Yup**.
-  _ El formulario solo puede enviarse si es válido.
-  _ Validación del token de reCAPTCHA (valor esperado: **"OK"**). 2. **Flujo**
-  _ Si el token de reCAPTCHA no es válido, se muestra un error visual.
-  _ Si el formulario es válido, se muestra un mensaje de éxito.
-  _ Se genera un código de solicitud simulado usando `crypto.randomUUID()`.
-  Este flujo simula el comportamiento de una integración real con backend sin depender de servicios externos.
+- Campo oculto de reCAPTCHA simulado
+  1.  **Validaciones**
+  - Validación de campos mediante **Formik + Yup**.
+  - El formulario solo puede enviarse si es válido.
+  - Validación del token de reCAPTCHA (valor esperado: **"OK"**). 2. **Flujo**
+  - Si el token de reCAPTCHA no es válido, se muestra un error visual.
+  - Si el formulario es válido, se muestra un mensaje de éxito.
+  - Se genera un código de solicitud simulado usando `crypto.randomUUID()`.
+
+Este flujo simula el comportamiento de una integración real con backend sin depender de servicios externos.
 
 ## Arquitectura y diseño
 
