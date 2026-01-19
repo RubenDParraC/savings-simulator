@@ -15,6 +15,13 @@ El objetivo es demostrar la construcción de una aplicación frontend moderna, c
 
 ## Navegación principal
 
+> **Nota sobre la navegación**
+>
+> La prueba técnica no especifica un flujo de navegación entre las tres pantallas solicitadas.  
+> Con el fin de facilitar la revisión de la solución y evitar la necesidad de acceder manualmente a cada vista mediante la URL, se implementó un **Header de navegación** que permite el acceso directo a cada una de las pantallas requeridas.
+>
+> Esta decisión busca mejorar la experiencia de revisión y no altera la lógica ni los requerimientos funcionales definidos en la prueba.
+
 - `/products` → Catálogo de productos financieros
 - `/simulator` → Simulador de ahorro
 - `/onboarding` → Apertura de cuenta
@@ -27,7 +34,6 @@ El objetivo es demostrar la construcción de una aplicación frontend moderna, c
 - Filtro por nombre o tipo.
 - Búsqueda en tiempo real con debounce para mejorar el rendimiento.
 - Renderizado mediante componentes reutilizables (`ProductCard`).
-
   1. **Criterios cumplidos:**
      - Filtros dinámicos
      - UX fluida
