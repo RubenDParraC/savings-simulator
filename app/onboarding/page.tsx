@@ -2,22 +2,47 @@
 
 import { useState } from "react";
 
-// external components
+// External libraries
 import { Formik } from "formik";
 import { twMerge } from "tailwind-merge";
 
-// schema
+// Validation schema
 import { CreateIntentionSchema } from "./schema";
 
-// components
+// UI components
 import { Input } from "@/components/input/input";
 
+/**
+ * OnboardingPage
+ *
+ * This page represents the account opening (onboarding) flow.
+ * It includes a form with validation, a simulated reCAPTCHA check,
+ * and a success state with a generated request code (UUID).
+ */
 export default function OnboardingPage() {
+  /**
+   * Controls whether the form was successfully submitted.
+   * Once true, the success message is displayed instead of the form.
+   */
   const [success, setSuccess] = useState(false);
+
+  /**
+   * Simulated reCAPTCHA token.
+   * In a real-world scenario, this value would come from a backend
+   * or a third-party reCAPTCHA service.
+   */
   const recaptchaToken = "OK";
 
+  /**
+   * Handles the final submission logic.
+   * Validates the reCAPTCHA token and updates the success state.
+   */
   const handleSend = () => {
-    if (recaptchaToken !== "OK") return alert("Recaptcha inválido");
+    if (recaptchaToken !== "OK") {
+      alert("Recaptcha inválido");
+      return;
+    }
+
     setSuccess(true);
   };
 
@@ -27,22 +52,36 @@ export default function OnboardingPage() {
         Apertura de Cuenta
       </h1>
 
+      {/**
+       * Conditional rendering:
+       * - If the form was successfully submitted, show a success message.
+       * - Otherwise, render the onboarding form.
+       */}
       {success ? (
         <p className="text-green-600">
           Solicitud exitosa. Código: {crypto.randomUUID()}
         </p>
       ) : (
         <Formik
-          enableReinitialize={true}
+          /**
+           * Initial form values.
+           * These match the fields required for the onboarding flow.
+           */
           initialValues={{
             name: "",
             document: "",
             email: "",
           }}
+          /**
+           * Yup validation schema.
+           * Handles required fields and email format validation.
+           */
           validationSchema={CreateIntentionSchema}
-          onSubmit={() => {
-            handleSend();
-          }}
+          /**
+           * Form submission handler.
+           * The actual business logic is delegated to `handleSend`.
+           */
+          onSubmit={handleSend}
         >
           {({
             values,
@@ -54,6 +93,9 @@ export default function OnboardingPage() {
             setFieldTouched,
           }) => (
             <div className="flex flex-col gap-3">
+              {/**
+               * Name input field
+               */}
               <Input
                 value={values.name}
                 placeholder="ej. Juan Rodriguez"
@@ -63,6 +105,11 @@ export default function OnboardingPage() {
                 onBlur={() => setFieldTouched("name")}
                 onChange={handleChange("name")}
               />
+
+              {/**
+               * Document input field
+               * Restricted to numeric values and non-negative numbers.
+               */}
               <Input
                 value={values.document}
                 placeholder="ej. 123456780"
@@ -75,6 +122,11 @@ export default function OnboardingPage() {
                 onBlur={() => setFieldTouched("document")}
                 onChange={handleChange("document")}
               />
+
+              {/**
+               * Email input field
+               * Validated using Yup's email validator.
+               */}
               <Input
                 value={values.email}
                 placeholder="ej. email@email.com"
@@ -84,6 +136,11 @@ export default function OnboardingPage() {
                 onBlur={() => setFieldTouched("email")}
                 onChange={handleChange("email")}
               />
+
+              {/**
+               * Submit button
+               * Disabled until the form is valid according to the schema.
+               */}
               <button
                 disabled={!isValid}
                 onClick={() => handleSubmit()}
