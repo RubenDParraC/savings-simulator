@@ -11,7 +11,7 @@ export default async function ProductsPage() {
 
   return (
     <div className="w-screen flex flex-col gap-8 p-10 md:px-24">
-      <h1 className="text-2xl font-bold text-slate-700">Productos de Ahorro</h1>
+      <h1 className="text-xl font-bold text-slate-700">Productos de Ahorro</h1>
 
       {/* Filtros en Client Component */}
       <ProductsClient products={products} />

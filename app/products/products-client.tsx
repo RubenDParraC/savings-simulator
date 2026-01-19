@@ -7,8 +7,8 @@ import { Input } from "@/components/input/input";
 import { ProductCard } from "@/components/product-card/product-card";
 
 // types
-import { Product } from "@/types/product";
-import { ProductsClientProps } from "./types";
+import type { Product } from "@/types/product";
+import type { ProductsClientProps } from "./types";
 
 export const ProductsClient = ({ products }: ProductsClientProps) => {
   const [search, setSearch] = useState("");
@@ -22,8 +22,8 @@ export const ProductsClient = ({ products }: ProductsClientProps) => {
         products.filter(
           (product) =>
             product.name.toLowerCase().includes(normalizedSearch) ||
-            product.type.toLowerCase().includes(normalizedSearch)
-        )
+            product.type.toLowerCase().includes(normalizedSearch),
+        ),
       );
     }, 300);
 

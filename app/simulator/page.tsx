@@ -11,12 +11,15 @@ import { isPositive } from "@/lib/validators";
 // components
 import { Input } from "@/components/input/input";
 
+// utils
+import { formatCurrency, parseCurrency } from "./utils";
+
 export default function SimulatorPage() {
-  const [initial, setInitial] = useState("");
-  const [monthly, setMonthly] = useState("");
-  const [months, setMonths] = useState("");
+  const [initial, setInitial] = useState<number>(0);
+  const [monthly, setMonthly] = useState<number>(0);
+  const [months, setMonths] = useState<string>("");
   const [result, setResult] = useState<number | null>(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string>("");
 
   const handleCalculate = () => {
     const initialValue = Number(initial);
@@ -48,18 +51,20 @@ export default function SimulatorPage() {
 
       <Input
         label="Monto inicial"
-        type="number"
-        min={0}
-        value={initial}
-        onChange={(e) => setInitial(e.target.value)}
+        type="text"
+        inputMode="numeric"
+        placeholder="ej. 1.000.000"
+        value={formatCurrency(initial)}
+        onChange={(e) => setInitial(parseCurrency(e.target.value))}
       />
 
       <Input
         label="Aporte mensual"
-        type="number"
-        min={0}
-        value={monthly}
-        onChange={(e) => setMonthly(e.target.value)}
+        type="text"
+        inputMode="numeric"
+        placeholder="ej. 1.000.000"
+        value={formatCurrency(monthly)}
+        onChange={(e) => setMonthly(parseCurrency(e.target.value))}
       />
 
       <Input
@@ -67,6 +72,7 @@ export default function SimulatorPage() {
         type="number"
         min={0}
         step={1}
+        placeholder="ej. 5"
         value={months}
         onChange={(e) => setMonths(e.target.value)}
       />

@@ -57,6 +57,7 @@ export default function OnboardingPage() {
               <Input
                 value={values.name}
                 placeholder="ej. Juan Rodriguez"
+                type="text"
                 label="Nombre *"
                 error={touched.name && errors.name ? errors.name : ""}
                 onBlur={() => setFieldTouched("name")}
@@ -78,6 +79,7 @@ export default function OnboardingPage() {
                 value={values.email}
                 placeholder="ej. email@email.com"
                 label="Correo electrónico *"
+                type="email"
                 error={touched.email && errors.email ? errors.email : ""}
                 onBlur={() => setFieldTouched("email")}
                 onChange={handleChange("email")}
@@ -87,10 +89,10 @@ export default function OnboardingPage() {
                 onClick={() => handleSubmit()}
                 className={twMerge(
                   !isValid && "opacity-50",
-                  "bg-slate-700 hover:bg-slate-500 text-white py-2 rounded cursor-pointer"
+                  "bg-slate-700 hover:bg-slate-500 text-white py-2 rounded cursor-pointer",
                 )}
               >
-                Enviar
+                Solicitar Apertura
               </button>
             </div>
           )}
